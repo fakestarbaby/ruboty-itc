@@ -30,12 +30,20 @@ module Ruboty
           @application.apple_id
         end
 
-        def version
+        def current_version
           @application.live_version.version
         end
 
-        def status
+        def current_status
           @application.live_version.app_status
+        end
+
+        def next_version
+          @application.edit_version.version
+        end
+
+        def next_status
+          @application.edit_version.app_status
         end
       end
     end
